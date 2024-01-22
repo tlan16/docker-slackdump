@@ -35,6 +35,7 @@ jobs:
             type=gha
             type=registry,ref=${{ secrets.DOCKER_USERNAME }}/slackdump:latest
           cache-to: type=gha,mode=max
+      - uses: actions/checkout@v4
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
         with:
