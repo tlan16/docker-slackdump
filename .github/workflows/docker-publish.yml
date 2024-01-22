@@ -30,6 +30,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKER_USERNAME }}/slackdump:latest
+          push: true
           cache-from: |
             type=gha
             type=registry,ref=${{ secrets.DOCKER_USERNAME }}/slackdump:latest
